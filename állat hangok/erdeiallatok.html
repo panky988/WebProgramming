@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<title>Erdei állathangok</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			*{margin:0;padding:0border:0;}
+			html, body{height:100%;}
+			html{display:table; margin:auto;}
+			body{background-color:#89CFF0;}
+			#audio{display:table-cell; vertical-align:middle; text-align:center;}
+
+			#head{margin:20px;text-align:center;font-family:"Times New Roman"; text-transform: uppercase; font-size:40px;}
+			img{cursor:pointer; width:450px; height:280px; margin:30px; transition: border-radius 0.8s; filter: grayscale(100%);}
+			/*img:hover{width:465px; height:295px;}*/
+
+			.button {
+			  padding: 20px 50px;
+			  font-size: 35px;
+			  text-align: center;
+			  cursor: pointer;
+			  outline: none;
+			  color: #fff;
+			  background-color: #ff0000;
+			  border: none;
+			  border-radius: 15px;
+			  box-shadow: 0 9px #999;
+			}
+
+			.button:hover {background-color: #c0392b}
+
+			.button:active {
+			  background-color: #d63031;
+			  box-shadow: 0 5px #666;
+			  transform: translateY(4px);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="head"><h1>Erdei állathangok</h1></div>
+		<div id="audio">
+		<a onclick="myAudioFunction('a');">
+     			<img id="medve" src="medve.jpg">
+ 		</a>
+ 		<a onclick="myAudioFunction('b');">
+     			<img id="bagoly" src="bagoly.jpg">
+ 		</a>
+		<a onclick="myAudioFunction('c');">
+     			<img id="fakopancs" src="fakopancs.jpg">
+ 		</a>
+		<a onclick="myAudioFunction('d');">
+     			<img id="fulemule" src="fulemule.jpg">
+ 		</a>
+		<a onclick="myAudioFunction('e');">
+     			<img id="szarvas" src="szarvas.jpg">
+ 		</a>
+		<a onclick="myAudioFunction('f');">
+     			<img id="vaddiszno" src="vaddiszno.jpg">
+ 		</a>
+		</a>
+		<br>
+		<a onclick="myAudioFunction('g');">
+     			<button class="button">Stop</button>
+ 		</a>
+		</div>
+<script>
+	var medveAudio = new Audio('medve.wav');
+	var bagolyAudio = new Audio('bagoly.wav');
+	var fakopancsAudio = new Audio('fakopancs.wav');
+	var fulemuleAudio = new Audio('fulemule.wav');
+	var szarvasAudio = new Audio('szarvas.wav');
+	var vaddisznoAudio = new Audio('vaddiszno.wav');
+
+	function atimer() 
+	{
+  		document.getElementById("medve").style.filter = "grayscale(100%)";
+		document.getElementById("medve").style.borderRadius = "0px";
+	}
+	function btimer() 
+	{
+  		document.getElementById("bagoly").style.filter = "grayscale(100%)";
+		document.getElementById("bagoly").style.borderRadius = "0px";
+	}
+	function ctimer() 
+	{
+  		document.getElementById("fakopancs").style.filter = "grayscale(100%)";
+		document.getElementById("fakopancs").style.borderRadius = "0px";
+	}
+	function dtimer() 
+	{
+  		document.getElementById("fulemule").style.filter = "grayscale(100%)";
+		document.getElementById("fulemule").style.borderRadius = "0px";
+	}
+	function etimer() 
+	{
+  		document.getElementById("szarvas").style.filter = "grayscale(100%)";
+		document.getElementById("szarvas").style.borderRadius = "0px";
+	}
+	function ftimer() 
+	{
+  		document.getElementById("vaddiszno").style.filter = "grayscale(100%)";
+		document.getElementById("vaddiszno").style.borderRadius = "0px";
+	}
+	function myAudioFunction(letter) 
+		{
+			if(letter == 'a') 
+			{
+				bagolyAudio.pause();
+				bagolyAudio.currentTime = 0;
+				fakopancsAudio.pause();
+				fakopancsAudio.currentTime = 0;
+				fulemuleAudio.pause();
+				fulemuleAudio.currentTime = 0;
+				szarvasAudio.pause();
+				szarvasAudio.currentTime = 0;
+				vaddisznoAudio.pause();
+				vaddisznoAudio.currentTime = 0;
+
+				document.getElementById("bagoly").style.filter = "grayscale(100%)";
+				document.getElementById("fakopancs").style.filter = "grayscale(100%)";
+				document.getElementById("fulemule").style.filter = "grayscale(100%)";
+				document.getElementById("szarvas").style.filter = "grayscale(100%)";
+				document.getElementById("vaddiszno").style.filter = "grayscale(100%)";
+
+				document.getElementById("bagoly").style.borderRadius = "0px";
+				document.getElementById("fakopancs").style.borderRadius = "0px";
+				document.getElementById("fulemule").style.borderRadius = "0px";
+				document.getElementById("szarvas").style.borderRadius = "0px";
+				document.getElementById("vaddiszno").style.borderRadius = "0px";
+
+				document.getElementById("medve").style.filter = "grayscale(0%)";
+				document.getElementById("medve").style.borderRadius = "50px";
+				medveAudio.play();
+				setTimeout(atimer, 10000);
+			} 
+			else if(letter == 'b') 
+			{
+				medveAudio.pause();
+				medveAudio.currentTime = 0;
+				fakopancsAudio.pause();
+				fakopancsAudio.currentTime = 0;
+				fulemuleAudio.pause();
+				fulemuleAudio.currentTime = 0;
+				szarvasAudio.pause();
+				szarvasAudio.currentTime = 0;
+				vaddisznoAudio.pause();
+				vaddisznoAudio.currentTime = 0;
+
+				document.getElementById("medve").style.filter = "grayscale(100%)";
+				document.getElementById("fakopancs").style.filter = "grayscale(100%)";
+				document.getElementById("fulemule").style.filter = "grayscale(100%)";
+				document.getElementById("szarvas").style.filter = "grayscale(100%)";
+				document.getElementById("vaddiszno").style.filter = "grayscale(100%)";
+
+				document.getElementById("medve").style.borderRadius = "0px";
+				document.getElementById("fakopancs").style.borderRadius = "0px";
+				document.getElementById("fulemule").style.borderRadius = "0px";
+				document.getElementById("szarvas").style.borderRadius = "0px";
+				document.getElementById("vaddiszno").style.borderRadius = "0px";
+
+				document.getElementById("bagoly").style.filter = "grayscale(0%)";
+				document.getElementById("bagoly").style.borderRadius = "50px";
+				bagolyAudio.play();
+				setTimeout(btimer, 10000);
+         		}
+	 		else if(letter == 'c')
+			{
+				medveAudio.pause();
+				medveAudio.currentTime = 0;
+				bagolyAudio.pause();
+				bagolyAudio.currentTime = 0;
+				fulemuleAudio.pause();
+				fulemuleAudio.currentTime = 0;
+				szarvasAudio.pause();
+				szarvasAudio.currentTime = 0;
+				vaddisznoAudio.pause();
+				vaddisznoAudio.currentTime = 0;
+
+				document.getElementById("medve").style.filter = "grayscale(100%)";
+				document.getElementById("bagoly").style.filter = "grayscale(100%)";
+				document.getElementById("fulemule").style.filter = "grayscale(100%)";
+				document.getElementById("szarvas").style.filter = "grayscale(100%)";
+				document.getElementById("vaddiszno").style.filter = "grayscale(100%)";
+
+				document.getElementById("medve").style.borderRadius = "0px";
+				document.getElementById("bagoly").style.borderRadius = "0px";
+				document.getElementById("fulemule").style.borderRadius = "0px";
+				document.getElementById("szarvas").style.borderRadius = "0px";
+				document.getElementById("vaddiszno").style.borderRadius = "0px";
+
+				document.getElementById("fakopancs").style.filter = "grayscale(0%)";
+				document.getElementById("fakopancs").style.borderRadius = "50px";
+	     			fakopancsAudio.play();
+				setTimeout(ctimer, 10000);
+         		}
+	 		else if(letter == 'd')
+			{
+				medveAudio.pause();
+				medveAudio.currentTime = 0;
+				bagolyAudio.pause();
+				bagolyAudio.currentTime = 0;
+				fakopancsAudio.pause();
+				fakopancsAudio.currentTime = 0;
+				szarvasAudio.pause();
+				szarvasAudio.currentTime = 0;
+				vaddisznoAudio.pause();
+				vaddisznoAudio.currentTime = 0;
+
+				document.getElementById("medve").style.filter = "grayscale(100%)";
+				document.getElementById("bagoly").style.filter = "grayscale(100%)";
+				document.getElementById("fakopancs").style.filter = "grayscale(100%)";
+				document.getElementById("szarvas").style.filter = "grayscale(100%)";
+				document.getElementById("vaddiszno").style.filter = "grayscale(100%)";
+
+				document.getElementById("medve").style.borderRadius = "0px";
+				document.getElementById("bagoly").style.borderRadius = "0px";
+				document.getElementById("fakopancs").style.borderRadius = "0px";
+				document.getElementById("szarvas").style.borderRadius = "0px";
+				document.getElementById("vaddiszno").style.borderRadius = "0px";
+
+				document.getElementById("fulemule").style.filter = "grayscale(0%)";
+				document.getElementById("fulemule").style.borderRadius = "50px";
+	     			fulemuleAudio.play();
+				setTimeout(dtimer, 10000);
+         		}
+	 		else if(letter == 'e')
+			{
+				medveAudio.pause();
+				medveAudio.currentTime = 0;
+				bagolyAudio.pause();
+				bagolyAudio.currentTime = 0;
+				fakopancsAudio.pause();
+				fakopancsAudio.currentTime = 0;
+				fulemuleAudio.pause();
+				fulemuleAudio.currentTime = 0;
+				vaddisznoAudio.pause();
+				vaddisznoAudio.currentTime = 0;
+
+				document.getElementById("medve").style.filter = "grayscale(100%)";
+				document.getElementById("bagoly").style.filter = "grayscale(100%)";
+				document.getElementById("fakopancs").style.filter = "grayscale(100%)";
+				document.getElementById("fulemule").style.filter = "grayscale(100%)";
+				document.getElementById("vaddiszno").style.filter = "grayscale(100%)";
+
+				document.getElementById("medve").style.borderRadius = "0px";
+				document.getElementById("bagoly").style.borderRadius = "0px";
+				document.getElementById("fakopancs").style.borderRadius = "0px";
+				document.getElementById("fulemule").style.borderRadius = "0px";
+				document.getElementById("vaddiszno").style.borderRadius = "0px";
+
+				document.getElementById("szarvas").style.filter = "grayscale(0%)";
+				document.getElementById("szarvas").style.borderRadius = "50px";
+	     			szarvasAudio.play();
+				setTimeout(etimer, 10000);
+         		}
+	 		else if(letter == 'f')
+			{
+				medveAudio.pause();
+				medveAudio.currentTime = 0;
+				bagolyAudio.pause();
+				bagolyAudio.currentTime = 0;
+				fakopancsAudio.pause();
+				fakopancsAudio.currentTime = 0;
+				fulemuleAudio.pause();
+				fulemuleAudio.currentTime = 0;
+				szarvasAudio.pause();
+				szarvasAudio.currentTime = 0;
+
+				document.getElementById("medve").style.filter = "grayscale(100%)";
+				document.getElementById("bagoly").style.filter = "grayscale(100%)";
+				document.getElementById("fakopancs").style.filter = "grayscale(100%)";
+				document.getElementById("fulemule").style.filter = "grayscale(100%)";
+				document.getElementById("szarvas").style.filter = "grayscale(100%)";
+
+				document.getElementById("medve").style.borderRadius = "0px";
+				document.getElementById("bagoly").style.borderRadius = "0px";
+				document.getElementById("fakopancs").style.borderRadius = "0px";
+				document.getElementById("fulemule").style.borderRadius = "0px";
+				document.getElementById("szarvas").style.borderRadius = "0px";
+
+				document.getElementById("vaddiszno").style.filter = "grayscale(0%)";
+				document.getElementById("vaddiszno").style.borderRadius = "50px";
+	     			vaddisznoAudio.play();
+				setTimeout(ftimer, 10000);
+         		}
+	 		else if(letter == 'g')
+			{
+				medveAudio.pause();
+				medveAudio.currentTime = 0;
+				bagolyAudio.pause();
+				bagolyAudio.currentTime = 0;
+				fakopancsAudio.pause();
+				fakopancsAudio.currentTime = 0;
+				fulemuleAudio.pause();
+				fulemuleAudio.currentTime = 0;
+				szarvasAudio.pause();
+				szarvasAudio.currentTime = 0;
+				vaddisznoAudio.pause();
+				vaddisznoAudio.currentTime = 0;
+
+				document.getElementById("medve").style.filter = "grayscale(100%)";
+				document.getElementById("bagoly").style.filter = "grayscale(100%)";
+				document.getElementById("fakopancs").style.filter = "grayscale(100%)";
+				document.getElementById("fulemule").style.filter = "grayscale(100%)";
+				document.getElementById("szarvas").style.filter = "grayscale(100%)";
+				document.getElementById("vaddiszno").style.filter = "grayscale(100%)";
+
+				document.getElementById("medve").style.borderRadius = "0px";
+				document.getElementById("bagoly").style.borderRadius = "0px";
+				document.getElementById("fakopancs").style.borderRadius = "0px";
+				document.getElementById("fulemule").style.borderRadius = "0px";
+				document.getElementById("szarvas").style.borderRadius = "0px";
+				document.getElementById("vaddiszno").style.borderRadius = "0px";
+         		}
+     		}
+</script>
+	</body>
+</html>
